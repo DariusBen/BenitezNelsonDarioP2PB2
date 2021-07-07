@@ -139,25 +139,25 @@ public class pruebaParcial2 {
 	
 	@Test (expected = JugadorNoEncontradoException.class)
 	public void  queseControleElError() throws JugadorNoEncontradoException{	
-//		Torneo miTorneo = new Torneo("Mi Bonito Torneo");
-//		
-//		miTorneo.crearPartido(1, "Boca", "River");
-//		
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("27308397", "Dario", "River", "DEF", 4));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("2808397", "Juan", "River", "DEF", 2));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("29308397", "Claudio", "River", "MED", 5));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("30308397", "Javier", "River", "MED", 6));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("31308397", "Javier", "River", "DEL", 7));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("32308397", "Sebas", "River", "ARQ", 1));
-//
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("33308397", "Pedro",  "Boca", "DEF", 4));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("34308397", "Manuel", "Boca", "DEF", 2));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("35308397", "Homero", "Boca", "MED", 5));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("36308397", "Luke", "Boca", "MED", 6));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("37308397", "Pepito", "Boca", "DEL", 7));
-//		miTorneo.getPartido(1).agregarJugador(new Jugador("38308397", "Leia", "Boca", "ARQ", 1));
-//		
-//		
-//		assertEquals((Integer) 6, miTorneo.getPartido(1).getCantidadJugadoresDelEquipo("Boca"));	
+		Torneo miTorneo = new Torneo("Mi Bonito Torneo");
+		
+		miTorneo.crearPartido(1, "Boca", "River");
+		
+		miTorneo.agregarJugadorAPartido(1, new Jugador("27308397", "Dario", "River", "DEF", 4));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("2808397", "Juan", "River", "DEF", 2));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("29308397", "Claudio", "River", "MED", 5));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("30308397", "Javier", "River", "MED", 6));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("31308397", "Javier", "River", "DEL", 7));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("32308397", "Sebas", "River", "ARQ", 1));
+
+		miTorneo.agregarJugadorAPartido(1,new Jugador("33308397", "Pedro",  "Boca", "DEF", 4));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("34308397", "Manuel", "Boca", "DEF", 2));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("35308397", "Homero", "Boca", "MED", 5));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("36308397", "Luke", "Boca", "MED", 6));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("37308397", "Pepito", "Boca", "DEL", 7));
+		miTorneo.agregarJugadorAPartido(1,new Jugador("8888888", "Leia", "Boca", "ARQ", 1));
+		
+		
+		assertEquals((Integer) 5, miTorneo.getPartido(1).getCantidadJugadoresDelEquipo("Boca"));	
 	}
 	}

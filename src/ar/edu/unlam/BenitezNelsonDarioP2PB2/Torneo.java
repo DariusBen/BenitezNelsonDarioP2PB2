@@ -52,5 +52,27 @@ public class Torneo {
 		
 	}
 	
+	public void agregarJugadorAPartido(Integer idPartido, Jugador jugador) throws JugadorNoEncontradoException
+	{
+		Boolean ingresar = false;
+		
+    	for (Persona miembro: this.miembros) {
+  		  if (miembro.getDNI() == jugador.getDNI())
+  		  {
+  			  ingresar = true;
+  		  }
+  		}	
+    	
+    	if (ingresar)
+    	{
+    		this.partidos.get(idPartido).agregarJugador(jugador); 
+    	}
+    	else
+    	{
+    		throw new JugadorNoEncontradoException("No Se encontro");
+    	}
+	}
+	
+	
 	
 }
